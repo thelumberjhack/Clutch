@@ -6,29 +6,26 @@
 //
 //
 
-#import <Foundation/Foundation.h>
 #import "Binary.h"
 
-@class Application;
+NS_ASSUME_NONNULL_BEGIN
 
 @interface ClutchBundle : NSBundle
-{
-    @public
-    NSOperationQueue *_dumpQueue;
-}
 
-@property ClutchBundle *parentBundle;
-@property (readonly) NSString *workingPath;
-@property (readonly) NSString *zipFilename;
-@property (readonly) NSString *zipPrefix;
-@property (readonly) NSURL *enumURL;
-@property (readonly) NSURL *bundleContainerURL;
-@property (readonly) Binary *executable;
+@property (nonatomic, retain) ClutchBundle *parentBundle;
+@property (nonatomic, retain, readonly) NSString *workingPath;
+@property (nonatomic, retain, readonly) NSString *zipFilename;
+@property (nonatomic, retain, readonly) NSString *zipPrefix;
+@property (nonatomic, retain, readonly) NSURL *enumURL;
+@property (nonatomic, retain, readonly) NSURL *bundleContainerURL;
+@property (nonatomic, retain, readonly) Binary *executable;
+@property (nonatomic, retain) NSOperationQueue *dumpQueue;
+@property (nonatomic, retain, readonly) NSString *displayName;
 
-@property (readonly) NSString* displayName;
-
-- (instancetype)initWithBundleInfo:(NSDictionary *)info;
+- (nullable instancetype)initWithBundleInfo:(NSDictionary *)info NS_DESIGNATED_INITIALIZER;
 - (void)dumpToDirectoryURL:(NSURL *)directoryURL;
 - (void)prepareForDump;
 
 @end
+
+NS_ASSUME_NONNULL_END

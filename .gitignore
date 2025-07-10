@@ -1,23 +1,27 @@
 # Xcode
-.DS_Store
 build/
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+*.xccheckout
+*~.nib
+DerivedData/
 *.pbxuser
-!default.pbxuser
 *.mode1v3
-!default.mode1v3
 *.mode2v3
-!default.mode2v3
 *.perspectivev3
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
 !default.perspectivev3
-*.xcworkspace
-!default.xcworkspace
-xcuserdata
-profile
+*.xccheckout
 *.moved-aside
-DerivedData
-.idea/
-# Pods - for those of you who use CocoaPods
-Pods
-# Executable
-Clutch/clutch
-Clutch/build
+!Podfile.lock
+.idea
+cmake-build-debug
+
+# OS junk
+.DS_Store
+.DS_Store?
+.Trashes
+.swp

@@ -6,15 +6,17 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+NS_ASSUME_NONNULL_BEGIN
 
 @class Application;
 
 @interface FinalizeDumpOperation : NSOperation
 
-@property (assign) BOOL onlyBinaries;
-@property (assign) NSInteger expectedBinariesCount;
+@property (nonatomic, assign) BOOL onlyBinaries;
+@property (nonatomic, assign) NSUInteger expectedBinariesCount;
 
-- (instancetype)initWithApplication:(Application *)application;
+- (nullable instancetype)initWithApplication:(nullable Application *)application NS_DESIGNATED_INITIALIZER;
 
 @end
+
+NS_ASSUME_NONNULL_END
